@@ -5,7 +5,7 @@ import Form from "./components/Form";
 import Movies from "./Movies";
 
 export default function App() {
-  let [movies, setMovies] = useState(Movies);
+  let [movies, setMovies] = useState([]);
   
   useEffect(() => {
     getMovies();
@@ -14,9 +14,10 @@ export default function App() {
   function getMovies() {
     fetch("/api/movies")
       .then((res) => res.json())
-      .then((json) => {
+      .then((data) => {
         // upon success, update tasks
-        setMovies(json);
+        setMovies(data);
+        console.log("Fetching movies: ", data)
       })
       .catch((error) => {
         // upon failure, show error message
@@ -33,7 +34,7 @@ export default function App() {
 
     fetch("/api/movies/", options)
       .then((res) => res.json())
-      .then((json) => {
+      .then((data) => {
         getMovies();
         //Food for thought: is this the best option?? 
         //or have the server send back the data with any post/put/delete request?
