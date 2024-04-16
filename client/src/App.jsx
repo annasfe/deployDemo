@@ -16,7 +16,7 @@ export default function App() {
       .then((res) => res.json())
       .then((data) => {
         // upon success, update tasks
-        setMovies(data);
+        setMovies(data || []);
         console.log("Fetching movies: ", data)
       })
       .catch((error) => {
