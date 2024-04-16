@@ -4,10 +4,10 @@ This repository includes a full stack app using React, Node/Express, and MySQL. 
 
 ## Notes
 
-This repo is connected currently to 3 remotes: 
+This repo is connected currently to 2 remotes: 
 
-- one in codeop's account (since initially it was deployed from there), this is called *origin*
-- one in annasfe's account, called *remoteAnnaGit*
-- one in heroku, created automatically when following the deployment steps and setting up the app the first time, called *heroku*.
+- one in "annasfe" account, called *remoteAnnaGit*
+- one in "heroku", created automatically when following the deployment steps and setting up the app the first time, called *heroku*.
+- there was a 3rd one, the initial *origin* connected to "codeopinstructor" account, but I removed it, cause we are not using that anymore.
 
 _Last updated April 16th, 2024._
